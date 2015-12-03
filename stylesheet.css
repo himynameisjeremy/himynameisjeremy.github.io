@@ -1,0 +1,128 @@
+body {
+	background-image: url("skulls.png");
+	background-repeat: repeat;
+}
+
+.resume {
+	margin-left: 240px;
+	margin-right: 240px;
+	margin-top: 60px;
+}
+
+.Name {
+	font-size: 20px;
+	font-weight: bold;
+	font-family: 'Shift', sans-serif;
+	text-align: right;
+}
+
+.Name img.resize {
+	max-width: 25%;
+	max-height: 25%;
+
+}
+
+.Name img {
+	border: 8px solid black;
+}
+
+.Contact-info {
+	font-size: 10px;
+	font-family: 'Shift', sans-serif;
+	font-style: italic;
+}
+
+.Education {
+	font-family: 'Shift', sans-serif;
+}
+
+.Education H1 {
+	font-size: 22px;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.Education H2 {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.Education H3 {
+	font-size: 14px;
+	font-style: italic;
+	text-indent: 15px;
+}
+
+.Education li {
+	font-size: 12px;
+}
+
+.International {
+	font-family: 'Shift', sans-serif;
+}
+
+.International H1 {
+	font-size: 22px;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.International H2 {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.International H3 {
+	font-size: 14px;
+	font-style: italic;
+	text-indent: 15px;
+}
+
+.International H4 {
+	font-size: 14px;
+	font-style: italic;
+	text-indent: 15px;
+}
+
+.International li {
+	font-size: 12px;
+}
+
+.Domestic {
+	font-family: 'Shift', sans-serif;
+}
+
+.Domestic H1 {
+	font-size: 22px;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.Domestic H2 {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.Domestic H3 {
+	font-size: 14px;
+	font-style: italic;
+	text-indent: 15px;
+}
+
+.Domestic H4 {
+	font-size: 14px;
+	font-style: italic;
+	text-indent: 15px;
+}
+
+.Domestic li {
+	font-size: 12px;
+}
+
+.Domestic p {
+	text-align: center;
+}
+
+.Domestic q {
+	font-style: italic;
+}
