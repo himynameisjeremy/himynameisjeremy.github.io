@@ -1,3 +1,12 @@
+@font-face{ 
+	font-family: 'Fertigo_PRO-webfont';
+	src: url('Fertigo_PRO-webfont.eot');
+	src: url('Fertigo_PRO-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('Fertigo_PRO-webfont.woff') format('woff'),
+	     url('Fertigo_PRO-webfont.ttf') format('truetype'),
+	     url('Fertigo_PRO-webfont.svg#webfont') format('svg');
+}
+
 body {
 	background-image: url("skulls.png");
 	background-repeat: repeat;
@@ -7,12 +16,13 @@ body {
 	margin-left: 240px;
 	margin-right: 240px;
 	margin-top: 60px;
+	color: black;
+	font-family: 'Fertigo_PRO-webfont', Arial, sans-serif;
 }
 
 .Name {
 	font-size: 20px;
 	font-weight: bold;
-	font-family: 'Shift', sans-serif;
 	text-align: right;
 }
 
@@ -24,16 +34,33 @@ body {
 
 .Name img {
 	border: 8px solid black;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	box-shadow: 5px 10px 10px #000;
+	transition: border .02 ease-in-out;
 }
 
+.Name img:hover {
+	border: 8px solid red;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+	box-shadow: 5px 10px 10px #000;
+}
 .Contact-info {
 	font-size: 10px;
-	font-family: 'Shift', sans-serif;
 	font-style: italic;
 }
 
 .Education {
-	font-family: 'Shift', sans-serif;
+	transition: color .02 ease-in-out;
+}
+
+.Education:hover {
+	color: red;
 }
 
 .Education H1 {
@@ -58,7 +85,11 @@ body {
 }
 
 .International {
-	font-family: 'Shift', sans-serif;
+	transition: color .02 ease-in-out;
+}
+
+.International:hover {
+	color:red;
 }
 
 .International H1 {
@@ -89,7 +120,11 @@ body {
 }
 
 .Domestic {
-	font-family: 'Shift', sans-serif;
+	transition: color .02 ease-in-out;
+}
+
+.Domestic:hover {
+	color: red;
 }
 
 .Domestic H1 {
@@ -119,10 +154,13 @@ body {
 	font-size: 12px;
 }
 
-.Domestic p {
+.quote {
+}
+
+.quote p {
 	text-align: center;
 }
 
-.Domestic q {
+.quote q {
 	font-style: italic;
 }
