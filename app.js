@@ -1,3 +1,35 @@
+var allYears = [];
+var chartText = "";
+var dataSet = [];
+var endYear = "";
+var highestSavedYear = "";
+var startYear = "";
+var tiedHighestArray = [];
+
+loadJSON('dataSet.json',
+         function(data) {
+					 	dataSet = data.dataSet;
+						getYearsRepresented();
+						countPopulation();
+						findYearWithHighestPopulation();
+            textForChart();
+						createChart();
+					},
+         function(xhr) { console.error(xhr); }
+);
+
+function countPopulation(){
+  for(i=0;i<dataSet.length;i++){
+    var birthYear = dataSet[i].birth;
+    var deathYear = dataSet[i].death;
+    while(birthYear <= deathYear){
+      var yearNeeded = birthYear - startYear;
+      allYears[yearNeeded].population++;
+      birthYear++;
+    }
+  }
+}
+
 function createChart() {
 	var dataPoints = [];
 	for(i=0;i<allYears.length;i++){
@@ -33,41 +65,6 @@ function createChart() {
 		]
 	});
 	chart.render();
-	console.log("3");
-}
-
-var allYears = [];
-var chartText = "";
-var dataSet = [];
-var endYear = "";
-var highestSavedYear = "";
-var startYear = "";
-var tiedHighestArray = [];
-
-loadJSON('dataSet.json',
-         function(data) {
-					 	dataSet = data.dataSet;
-						console.log("1");
-						getYearsRepresented();
-						countPopulation();
-						findYearWithHighestPopulation();
-            textForChart();
-						console.log("2");
-						createChart();
-					},
-         function(xhr) { console.error(xhr); }
-);
-
-function countPopulation(){
-  for(i=0;i<dataSet.length;i++){
-    var birthYear = dataSet[i].birth;
-    var deathYear = dataSet[i].death;
-    while(birthYear <= deathYear){
-      var yearNeeded = birthYear - startYear;
-      allYears[yearNeeded].population++;
-      birthYear++;
-    }
-  }
 }
 
 function findYearWithHighestPopulation(){
