@@ -1,4 +1,4 @@
-window.onload = function () {
+function createChart() {
 	var dataPoints = [];
 	for(i=0;i<allYears.length;i++){
 		if(allYears[i].population!=highestSavedYear.population){
@@ -34,7 +34,7 @@ window.onload = function () {
 	});
 	chart.render();
 	console.log("3");
-};
+}
 
 var allYears = [];
 var chartText = "";
@@ -53,6 +53,7 @@ loadJSON('dataSet.json',
 						findYearWithHighestPopulation();
             textForChart();
 						console.log("2");
+						createChart();
 					},
          function(xhr) { console.error(xhr); }
 );
