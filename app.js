@@ -33,6 +33,7 @@ window.onload = function () {
 		]
 	});
 	chart.render();
+	console.log("3");
 };
 
 var allYears = [];
@@ -46,10 +47,12 @@ var tiedHighestArray = [];
 loadJSON('dataSet.json',
          function(data) {
 					 	dataSet = data.dataSet;
+						console.log("1");
 						getYearsRepresented();
 						countPopulation();
 						findYearWithHighestPopulation();
             textForChart();
+						console.log("2");
 					},
          function(xhr) { console.error(xhr); }
 );
